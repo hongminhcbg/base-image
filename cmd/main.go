@@ -32,6 +32,12 @@ func main() {
 			Description: "run liveness server",
 			Action:      liveness.Main,
 		},
+		{
+			Name:        "liveness_dep",
+			Usage:       "run liveness server with dependencies health",
+			Description: "run liveness server with dependencies health",
+			Action:      liveness.LivenessDependencies,
+		},
 	}
 
 	app.Run(context.Background(), os.Args)
